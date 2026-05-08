@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitici Oyun - Giriş</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <div class="background"></div>
+    
+    <div class="speech-bubble">
+        <div>Hoşgeldin! Oyuna başlamak için aşağıdaki butona tıkla.</div>
+        <button class="start-btn" onclick="window.location.href='soru1.html'">Başla</button>
+    </div>
+
+    <script>
+        // Oyun başladığında skoru sıfırla
+        sessionStorage.setItem('gameScore', 0);
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitici Oyun - Soru 4</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <a href="soru3.html" class="back-btn">Geri Dön</a>
+    <div id="scoreboard" class="scoreboard">Skor: 0</div>
+
+    <div id="feedbackOverlay" class="feedback-overlay"></div>
+
+    <div class="speech-bubble">
+        İnsanlar en değerli eşyalarını ona emanet ederdi çünkü onun bunları canı gibi koruyacağını bilirlerdi. Asla
+        kimsenin sırrını başkasına söylemezdi.<br><br>
+        Bir arkadaşın sana güvendiği için çok gizli bir sırrını söylese, onu başkalarından nasıl korursun?
+    </div>
+
+    <div class="emoji-container">
+        <div class="emoji" onclick="checkAnswer('💔')">💔</div>
+        <div class="emoji" onclick="checkAnswer('😊')">😊</div>
+        <div class="emoji" onclick="checkAnswer('🐑')">🐑</div>
+        <div class="emoji" onclick="checkAnswer('❌')">❌</div>
+        <div class="emoji" onclick="checkAnswer('✅')">✅</div>
+        <div class="emoji" onclick="checkAnswer('⚖️')">⚖️</div>
+        <div class="emoji" onclick="checkAnswer('🎁')">🎁</div>
+        <div class="emoji" onclick="checkAnswer('❤️')">❤️</div>
+        <div class="emoji" onclick="checkAnswer('😢')">😢</div>
+        <div class="emoji" onclick="checkAnswer('👍🏻')">👍🏻</div>
+        <div class="emoji" onclick="checkAnswer('🥱')">🥱</div>
+        <div class="emoji" onclick="checkAnswer('💪🏻')">💪🏻</div>
+    </div>
+
+    <script>
+        let currentScore = parseInt(sessionStorage.getItem('gameScore')) || 0;
+        document.getElementById('scoreboard').innerText = 'Skor: ' + currentScore;
+
+        let selectedCorrectEmojis = new Set();
+
+        function checkAnswer(selectedEmoji) {
+            const correctEmojis = ['⚖️'];
+            const nextPage = 'soru5.html';
+            const overlay = document.getElementById('feedbackOverlay');
+
+            if (correctEmojis.includes(selectedEmoji)) {
+                if (!selectedCorrectEmojis.has(selectedEmoji)) {
+                    selectedCorrectEmojis.add(selectedEmoji);
+                    currentScore += 10;
+                    sessionStorage.setItem('gameScore', currentScore);
+                    document.getElementById('scoreboard').innerText = 'Skor: ' + currentScore;
+
+                    // Highlight the selected correct emoji to give visual feedback to user
+                    const emojis = document.querySelectorAll('.emoji');
+                    emojis.forEach(el => {
+                        if (el.innerText === selectedEmoji) {
+                            el.style.backgroundColor = 'rgba(0, 255, 0, 0.3)';
+                            el.style.border = '2px solid green';
+                        }
+                    });
+                }
+
+                overlay.innerHTML = '✅';
+                overlay.className = 'feedback-overlay correct';
+
+                if (selectedCorrectEmojis.size === correctEmojis.length) {
+                    setTimeout(() => {
+                        window.location.href = nextPage;
+                    }, 1000);
+                } else {
+                    setTimeout(() => {
+                        overlay.className = 'feedback-overlay'; // hide
+                    }, 800);
+                }
+            } else {
+                overlay.innerHTML = '❌';
+                overlay.className = 'feedback-overlay wrong';
+                setTimeout(() => {
+                    overlay.className = 'feedback-overlay'; // hide
+                }, 800);
+            }
+        }
+    </script>
+</body>
+
+</html>
