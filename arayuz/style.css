@@ -205,3 +205,25 @@ body {
         opacity: 1;
     }
 }
+
+.next-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 3px solid #2e6b30;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    z-index: 10;
+}
+
+.next-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

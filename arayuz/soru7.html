@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eğitici Oyun - Soru 7</title>
     <link rel="stylesheet" href="style.css?v=2">
 </head>
+
 <body>
     <div class="background"></div>
-    
+
     <a href="soru6.html" class="back-btn">Geri Dön</a>
     <div id="scoreboard" class="scoreboard">Skor: 0</div>
 
     <div id="feedbackOverlay" class="feedback-overlay"></div>
 
     <div class="speech-bubble">
-        Çocukken kendisine bakan sütannesi Halime'yi yıllar sonra bir gün gördüğünde, hemen ayağa kalkmış ve kendi hırkasını onun oturması için yere sermiştir.<br><br>
-        Sen de senin üzerinde emeği olan insanlara (örneğin eski bir öğretmenine) minnetini nasıl gösterirsin?
+        Çocukken kendisine bakan sütannesi Halime'yi yıllar sonra bir gün gördüğünde, hemen ayağa kalkmış ve kendi
+        hırkasını onun oturması için yere sermiştir.<br><br>
+
     </div>
 
     <div class="emoji-container">
@@ -51,11 +54,11 @@
                     currentScore += 10;
                     sessionStorage.setItem('gameScore', currentScore);
                     document.getElementById('scoreboard').innerText = 'Skor: ' + currentScore;
-                    
+
                     // Highlight the selected correct emoji to give visual feedback to user
                     const emojis = document.querySelectorAll('.emoji');
                     emojis.forEach(el => {
-                        if(el.innerText === selectedEmoji) {
+                        if (el.innerText === selectedEmoji) {
                             el.style.backgroundColor = 'rgba(0, 255, 0, 0.3)';
                             el.style.border = '2px solid green';
                         }
@@ -64,7 +67,7 @@
 
                 overlay.innerHTML = '✅';
                 overlay.className = 'feedback-overlay correct';
-                
+
                 if (selectedCorrectEmojis.size === correctEmojis.length) {
                     setTimeout(() => {
                         window.location.href = nextPage;
@@ -84,4 +87,5 @@
         }
     </script>
 </body>
+
 </html>

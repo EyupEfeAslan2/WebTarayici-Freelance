@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eğitici Oyun - Soru 8</title>
     <link rel="stylesheet" href="style.css?v=2">
 </head>
+
 <body>
     <div class="background"></div>
-    
+
     <a href="soru7.html" class="back-btn">Geri Dön</a>
     <div id="scoreboard" class="scoreboard">Skor: 0</div>
 
     <div id="feedbackOverlay" class="feedback-overlay"></div>
 
     <div class="speech-bubble">
-        Dedesi Abdülmuttalib'in meclislerinde otururken büyüklerin sözünü hiç kesmez, onlara karşı her zaman çok edepli ve saygılı davranırdı.<br><br>
-        Sen ailendeki büyüklerinle (deden, anneannen vb.) vakit geçirirken onlara saygını nasıl belli ediyorsun?
+        Dedesi Abdülmuttalib'in meclislerinde otururken büyüklerin sözünü hiç kesmez, onlara karşı her zaman çok edepli
+        ve saygılı davranırdı.<br><br>
     </div>
 
     <div class="emoji-container">
@@ -52,11 +54,11 @@
                     currentScore += 10;
                     sessionStorage.setItem('gameScore', currentScore);
                     document.getElementById('scoreboard').innerText = 'Skor: ' + currentScore;
-                    
+
                     // Highlight the selected correct emoji to give visual feedback to user
                     const emojis = document.querySelectorAll('.emoji');
                     emojis.forEach(el => {
-                        if(el.innerText === selectedEmoji) {
+                        if (el.innerText === selectedEmoji) {
                             el.style.backgroundColor = 'rgba(0, 255, 0, 0.3)';
                             el.style.border = '2px solid green';
                         }
@@ -65,7 +67,7 @@
 
                 overlay.innerHTML = '✅';
                 overlay.className = 'feedback-overlay correct';
-                
+
                 if (selectedCorrectEmojis.size === correctEmojis.length) {
                     setTimeout(() => {
                         window.location.href = nextPage;
@@ -85,4 +87,5 @@
         }
     </script>
 </body>
+
 </html>

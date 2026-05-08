@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitici Oyun - Soru 1</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <a href="index.html" class="back-btn">Geri Dön</a>
+    <div id="scoreboard" class="scoreboard">Skor: 0</div>
+
+    <div id="feedbackOverlay" class="feedback-overlay"></div>
+
+    <div class="speech-bubble">
+        Peki sen annenin, babanın, dedenin veya anneannenin konuşmalarını dinlerken veya bir şeyler anlatırken nasıl
+        davranıyorsun?
+    </div>
+
+    <a href="soru10.html" class="next-btn">İlerle</a>
+
+    <script>
+        let currentScore = parseInt(sessionStorage.getItem('gameScore')) || 0;
+        document.getElementById('scoreboard').innerText = 'Skor: ' + currentScore;
+    </script>
+</body>
+
+</html>

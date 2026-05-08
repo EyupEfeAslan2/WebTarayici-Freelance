@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitici Oyun - Soru 1</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <a href="index.html" class="back-btn">Geri Dön</a>
+    <div id="scoreboard" class="scoreboard">Skor: 0</div>
+
+    <div id="feedbackOverlay" class="feedback-overlay"></div>
+
+    <div class="speech-bubble">
+        Arkadaşların okulda kurallara uymayan kötü bir şey yaptığında onlara "Hayır" demeyi nasıl başarırsın?
+    </div>
+
+    <a href="soru4.html" class="next-btn">İlerle</a>
+
+    <script>
+        let currentScore = parseInt(sessionStorage.getItem('gameScore')) || 0;
+        document.getElementById('scoreboard').innerText = 'Skor: ' + currentScore;
+    </script>
+</body>
+
+</html>
