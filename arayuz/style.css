@@ -227,3 +227,75 @@ body {
     transform: translateY(2px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* Mobil Ekran Uyumluluğu */
+@media (max-width: 768px) {
+    .speech-bubble {
+        width: 85%;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    /* Oku aşağı doğru yönlendir (konuşma balonu üstte olacağı için) */
+    .speech-bubble::before {
+        top: 100%;
+        left: 50%;
+        right: auto;
+        margin-top: 0;
+        margin-left: -20px;
+        border-width: 20px;
+        border-color: #333 transparent transparent transparent;
+    }
+
+    .speech-bubble::after {
+        top: 100%;
+        left: 50%;
+        right: auto;
+        margin-top: 0;
+        margin-left: -14px;
+        border-width: 14px;
+        border-color: #ffffff transparent transparent transparent;
+    }
+
+    .emoji-container {
+        width: 95%;
+        bottom: 2%;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .emoji {
+        font-size: 40px;
+    }
+
+    .scoreboard {
+        font-size: 18px;
+        top: 10px;
+        right: 10px;
+        padding: 5px 10px;
+    }
+
+    .back-btn {
+        font-size: 16px;
+        top: 10px;
+        left: 10px;
+        padding: 5px 10px;
+    }
+
+    .next-btn {
+        font-size: 16px;
+        bottom: 10px;
+        right: 10px;
+        padding: 5px 10px;
+    }
+
+    .start-btn {
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+}
