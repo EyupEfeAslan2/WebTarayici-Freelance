@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/public/arayuz/index.html"
+      "destination": "/arayuz/index.html"
     },
     {
       "source": "/(.*)",
-      "destination": "/public/arayuz/$1"
+      "destination": "/arayuz/$1"
     }
   ]
 }
