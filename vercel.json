@@ -1,6 +1,12 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/arayuz/index.html" },
-    { "source": "/(.*)", "destination": "/arayuz/$1" }
+    {
+      "source": "/",
+      "destination": "/public/arayuz/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/public/arayuz/$1"
+    }
   ]
 }
