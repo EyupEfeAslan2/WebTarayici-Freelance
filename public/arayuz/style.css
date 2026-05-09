@@ -208,8 +208,8 @@ body {
 
 .next-btn {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    top: 20px;
+    right: 180px;
     font-size: 24px;
     font-weight: bold;
     background: #4CAF50;
@@ -289,8 +289,8 @@ body {
 
     .next-btn {
         font-size: 16px;
-        bottom: 10px;
-        right: 10px;
+        top: 10px;
+        right: 110px;
         padding: 5px 10px;
     }
 
