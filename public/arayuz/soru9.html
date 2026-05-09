@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eğitici Oyun - Soru 9</title>
+    <title>Eğitici Oyun - Soru 10</title>
     <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
     <div class="background"></div>
 
-    <a href="soru8.html" class="back-btn">Geri Dön</a>
+    <a href="yorum9.html" class="back-btn">Geri Dön</a>
     <div id="scoreboard" class="scoreboard">Skor: 0</div>
 
     <div id="feedbackOverlay" class="feedback-overlay"></div>
 
     <div class="speech-bubble">
-        Dedesi Abdülmuttalib'in meclislerinde otururken büyüklerin sözünü hiç kesmez, onlara karşı her zaman çok edepli
-        ve saygılı davranırdı.
-        <br><br><span style="font-size: 16px; color: #555;"><i>Sence bu durumu en iyi hangi emojiler anlatır?</i></span>
-    </div>
+        Mekke'ye gelen kimsesiz yabancıların mallarına el koyan zorbaları durdurmak ve mazlumları korumak için gönüllü
+        olarak Erdemliler Topluluğu'na katıldı.<br><br>
 
+        <br><br><span style="font-size: 16px; color: #555;"><i>Sence bu durumu en iyi hangi emoji/emojiler anlatır?</i></span>
+    </div>
 
     <div class="emoji-container">
         <div class="emoji" onclick="checkAnswer('💔')">💔</div>
@@ -36,9 +36,11 @@
         <div class="emoji" onclick="checkAnswer('👍🏻')">👍🏻</div>
         <div class="emoji" onclick="checkAnswer('🥱')">🥱</div>
         <div class="emoji" onclick="checkAnswer('💪🏻')">💪🏻</div>
-        <div class="emoji" onclick="checkAnswer('👂🏻')">👂🏻</div>
-        <div class="emoji" onclick="checkAnswer('👴🏼')">👴🏼</div>
+        <div class="emoji" onclick="checkAnswer('🛡️')">🛡️</div>
+        <div class="emoji" onclick="checkAnswer('🤝')">🤝</div>
     </div>
+
+    <a href="yorum9.html" class="next-btn">İlerle</a>
 
     <script>
         let currentScore = parseInt(sessionStorage.getItem('gameScore')) || 0;
@@ -47,7 +49,7 @@
         let selectedCorrectEmojis = new Set();
 
         function checkAnswer(selectedEmoji) {
-            const correctEmojis = ['👂🏻', '👴🏼'];
+            const correctEmojis = ['🛡️', '🤝', '⚖️'];
             const nextPage = 'yorum9.html';
             const overlay = document.getElementById('feedbackOverlay');
 

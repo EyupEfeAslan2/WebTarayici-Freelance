@@ -11,7 +11,7 @@
 <body>
     <div class="background"></div>
 
-    <a href="soru2.html" class="back-btn">Geri Dön</a>
+    <a href="yorum2.html" class="back-btn">Geri Dön</a>
     <div id="scoreboard" class="scoreboard">Skor: 0</div>
 
     <div id="feedbackOverlay" class="feedback-overlay"></div>
@@ -19,7 +19,7 @@
     <div class="speech-bubble">
         Gençliğinde, Mekke'deki diğer insanlar putlara tapıp onlar için eğlenceler düzenlerken, o bu anlamsız törenlere
         asla katılmamış, uzak durmuştur.
-        <br><br><span style="font-size: 16px; color: #555;"><i>Sence bu durumu en iyi hangi emojiler anlatır?</i></span>
+        <br><br><span style="font-size: 16px; color: #555;"><i>Sence bu durumu en iyi hangi emoji/emojiler anlatır?</i></span>
     </div>
 
     <div class="emoji-container">
@@ -35,8 +35,10 @@
         <div class="emoji" onclick="checkAnswer('👍🏻')">👍🏻</div>
         <div class="emoji" onclick="checkAnswer('🥱')">🥱</div>
         <div class="emoji" onclick="checkAnswer('💪🏻')">💪🏻</div>
-        <div class="emoji" onclick="checkAnswer('🛑')">🛑</div>
+        <div class="emoji" onclick="checkAnswer('👏🏻')">👏🏻</div>
     </div>
+
+    <a href="yorum3.html" class="next-btn">İlerle</a>
 
     <script>
         let currentScore = parseInt(sessionStorage.getItem('gameScore')) || 0;
@@ -45,7 +47,7 @@
         let selectedCorrectEmojis = new Set();
 
         function checkAnswer(selectedEmoji) {
-            const correctEmojis = ['❌', '🛑'];
+            const correctEmojis = ['❌', '👏🏻'];
             const nextPage = 'yorum3.html';
             const overlay = document.getElementById('feedbackOverlay');
 

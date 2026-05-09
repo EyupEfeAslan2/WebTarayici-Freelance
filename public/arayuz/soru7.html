@@ -11,7 +11,7 @@
 <body>
     <div class="background"></div>
 
-    <a href="soru6.html" class="back-btn">Geri Dön</a>
+    <a href="yorum6.html" class="back-btn">Geri Dön</a>
     <div id="scoreboard" class="scoreboard">Skor: 0</div>
 
     <div id="feedbackOverlay" class="feedback-overlay"></div>
@@ -20,7 +20,7 @@
         Çocukken kendisine bakan sütannesi Halime'yi yıllar sonra bir gün gördüğünde, hemen ayağa kalkmış ve kendi
         hırkasını onun oturması için yere sermiştir.<br><br>
 
-        <br><br><span style="font-size: 16px; color: #555;"><i>Sence bu durumu en iyi hangi emojiler anlatır?</i></span>
+        <br><br><span style="font-size: 16px; color: #555;"><i>Sence bu durumu en iyi hangi emoji/emojiler anlatır?</i></span>
     </div>
 
     <div class="emoji-container">
@@ -38,6 +38,8 @@
         <div class="emoji" onclick="checkAnswer('💪🏻')">💪🏻</div>
     </div>
 
+    <a href="yorum7.html" class="next-btn">İlerle</a>
+
     <script>
         let currentScore = parseInt(sessionStorage.getItem('gameScore')) || 0;
         document.getElementById('scoreboard').innerText = 'Skor: ' + currentScore;
@@ -45,7 +47,7 @@
         let selectedCorrectEmojis = new Set();
 
         function checkAnswer(selectedEmoji) {
-            const correctEmojis = ['❤️', '🎁'];
+            const correctEmojis = ['😊', '🎁', '❤️'];
             const nextPage = 'yorum7.html';
             const overlay = document.getElementById('feedbackOverlay');
 
